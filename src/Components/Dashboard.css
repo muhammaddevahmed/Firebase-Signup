@@ -111,6 +111,7 @@ table {
   border-collapse: collapse;
   background: white;
   min-width: 600px; /* Ensure table has a minimum width */
+  color: black;
 }
 
 th, td {
