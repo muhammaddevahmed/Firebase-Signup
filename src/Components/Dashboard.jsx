@@ -53,30 +53,32 @@ const Dashboard = () => {
       <main className="main-content">
         <h1>All Registered Users</h1>
         {usersData.length > 0 ? (
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Gender</th>
-                <th>Country</th>
-                <th>City</th>
-              </tr>
-            </thead>
-            <tbody>
-              {usersData.map((user, index) => (
-                <tr key={index}>
-                  <td>{user.name}</td>
-                  <td>{user.email}</td>
-                  <td>{user.phone}</td>
-                  <td>{user.gender}</td>
-                  <td>{user.country}</td>
-                  <td>{user.city}</td>
+          <div className="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Gender</th>
+                  <th>Country</th>
+                  <th>City</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {usersData.map((user, index) => (
+                  <tr key={index}>
+                    <td>{user.name}</td>
+                    <td>{user.email}</td>
+                    <td>{user.phone}</td>
+                    <td>{user.gender}</td>
+                    <td>{user.country}</td>
+                    <td>{user.city}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         ) : (
           <p>No users found...</p>
         )}

@@ -1,93 +1,128 @@
 /* Signup Page Styling */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #2d6cdf; /* Blue Background */
-    font-family: Arial, sans-serif;
-    margin: 0;
-  }
-  
+
+
+/* Signup Container */
+.signup-container {
+  max-width: 800px; /* Increased width */
+  width: 60vw;
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signup-container:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Signup Heading */
+.signup-container h2 {
+  color: #222;
+  font-size: 26px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* Signup Form */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Input & Select Fields */
+.signup-form input,
+.signup-form select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  font-size: 17px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+/* Focus Effect */
+.signup-form input:focus,
+.signup-form select:focus {
+  border-color: #2d6cdf;
+  box-shadow: 0px 0px 10px rgba(45, 108, 223, 0.35);
+}
+
+/* Select Dropdown */
+.signup-form select {
+  appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="gray" d="M7 10l5 5 5-5z"/></svg>') no-repeat right 15px center;
+  background-size: 20px;
+  cursor: pointer;
+}
+
+/* Submit Button */
+.signup-form button {
+  background: #2d6cdf;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 19px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 12px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover & Click Effect */
+.signup-form button:hover {
+  background: #1f4db5;
+  transform: scale(1.06);
+}
+
+/* Text Below Form */
+.signup-form p {
+  margin-top: 18px;
+  font-size: 15px;
+  color: #555;
+}
+
+/* Links */
+.signup-form p a {
+  color: #2d6cdf;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-form p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .signup-container {
-    
-    max-width: 800px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 30vw;
+      max-width: 500px;
+      padding: 25px;
   }
-  
-  .signup-container h2 {
-    color: #333;
-    font-size: 22px;
-    margin-bottom: 20px;
-    text-align: left;
-    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .signup-container {
+      max-width: 90vw;
+
+      padding: 22px;
   }
-  
-  .signup-form {
-    display: flex;
-    flex-direction: column;
+}
+
+@media (max-width: 480px) {
+  .signup-container {
+      padding: 18px;
   }
-  
+
   .signup-form input,
-  .signup-form select {
-    width: 90%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-  }
-  
-  .signup-form input:focus,
-  .signup-form select:focus {
-    border-color: #2d6cdf;
-  }
-  
-  .signup-form select {
-    appearance: none;
-    cursor: pointer;
-  }
-  
+  .signup-form select,
   .signup-form button {
-    background: #2d6cdf;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    margin-top: 10px;
+      font-size: 15px;
+      padding: 12px;
   }
-  
-  .signup-form button:hover {
-    background: #1f4db5;
-  }
-  
-  .signup-form p {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #555;
-  }
-  
-  .signup-form p a {
-    color: #2d6cdf;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .signup-form p a:hover {
-    text-decoration: underline;
-  }
-  
-  @media (max-width: 500px) {
-    .signup-container {
-      width: 90%;
-    }
-  }
-  
+}
