@@ -107,9 +107,14 @@
       padding: 18px;
   }
 
-  .login-form input,
-  .login-form button {
+  .login-form input {
       font-size: 15px;
       padding: 12px;
+      width: 90%;
+  }
+  .login-form button{
+    font-size: 15px;
+      padding: 12px;
+      width: 100%;
   }
 }

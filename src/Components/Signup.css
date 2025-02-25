@@ -120,9 +120,12 @@
   }
 
   .signup-form input,
-  .signup-form select,
-  .signup-form button {
+  .signup-form select {
       font-size: 15px;
       padding: 12px;
+      width: 95%;
+  }
+  .signup-form button{
+    width: 100%;
   }
 }
