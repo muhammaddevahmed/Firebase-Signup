@@ -1,28 +1,35 @@
-
-/* Login Container */
-.login-container {
-  width: 100%;
-  max-width: 450px; /* Increased width */
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100vh;
 }
 
-/* Hover Effect */
+/* Centered Login Container */
+.login-container {
+  max-width: 400px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 14px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .login-container:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.35);
 }
 
 /* Login Heading */
 .login-container h2 {
-  color: #222;
+  color: black;
   font-size: 26px;
-  margin-bottom: 25px;
-  text-align: center;
+  margin-bottom: 20px;
   font-weight: 700;
 }
 
@@ -30,55 +37,60 @@
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 15px;
 }
 
 /* Input Fields */
 .login-form input {
-  width: 100%;
+  width: 90%;
   padding: 14px;
-  border: 1px solid #bbb;
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 8px;
-  font-size: 17px;
+  font-size: 16px;
   outline: none;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.2);
+  color: black;
 }
 
-/* Focus Effect */
+/* Placeholder Text */
+.login-form input::placeholder {
+  color: rgba(15, 14, 14, 0.7);
+}
+
+/* Input Focus Effect */
 .login-form input:focus {
-  border-color: #2d6cdf;
-  box-shadow: 0px 0px 10px rgba(45, 108, 223, 0.3);
+  border-color: #ffea00;
+  box-shadow: 0px 0px 10px rgba(255, 234, 0, 0.5);
 }
 
 /* Submit Button */
 .login-form button {
-  background: #2d6cdf;
-  color: white;
+  background: #7C4EE4;
+  color: #222;
   padding: 14px;
   border: none;
   border-radius: 8px;
   font-size: 18px;
-  font-weight: 600;
   cursor: pointer;
+  font-weight: 600;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/* Button Hover Effect */
 .login-form button:hover {
-  background: #1f4db5;
-  transform: scale(1.05);
+  background: #baa3ef;
+  transform: scale(1.08);
 }
 
 /* Text Below Form */
 .login-form p {
-  margin-top: 15px;
-  font-size: 15px;
-  color: #555;
+  margin-top: 10px;
+  font-size: 14px;
+  color: black;
 }
 
-/* Links */
 .login-form p a {
-  color: #2d6cdf;
+  color: #7C4EE4;
   text-decoration: none;
   font-weight: bold;
 }
@@ -88,33 +100,16 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-  .login-container {
-      max-width: 400px;
-      padding: 25px;
-  }
-}
-
 @media (max-width: 768px) {
   .login-container {
-      max-width: 90%;
-      padding: 22px;
+    max-width: 350px;
+    padding: 25px;
   }
 }
 
 @media (max-width: 480px) {
   .login-container {
-      padding: 18px;
-  }
-
-  .login-form input {
-      font-size: 15px;
-      padding: 12px;
-      width: 90%;
-  }
-  .login-form button{
-    font-size: 15px;
-      padding: 12px;
-      width: 100%;
+    max-width: 90%;
+    padding: 20px;
   }
 }

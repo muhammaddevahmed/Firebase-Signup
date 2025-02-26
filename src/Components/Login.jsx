@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { auth, signInWithEmailAndPassword } from "../Firebase/index";
-import { useNavigate, Link } from "react-router-dom"; // Import Link
+import { useNavigate, Link } from "react-router-dom";
 import "./Login.css"; // Import CSS
 
 const Login = () => {
@@ -20,17 +20,28 @@ const Login = () => {
   };
 
   return (
+    <div className="center">
     <div className="login-container">
       <h2>Login</h2>
       <form className="login-form" onSubmit={handleLogin}>
-        <input type="email" placeholder="Enter your email" onChange={(e) => setEmail(e.target.value)} required />
-        <input type="password" placeholder="Enter your password" onChange={(e) => setPassword(e.target.value)} required />
+        <input
+          type="email"
+          placeholder="Enter your email"
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Enter your password"
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
         <button type="submit">Login</button>
         <p>
-  Do not have an account? <Link to="/signup">Sign up now</Link>
-</p>
-
+          Do not have an account? <Link to="/Pages/Signup">Sign up now</Link>
+        </p>
       </form>
+    </div>
     </div>
   );
 };
